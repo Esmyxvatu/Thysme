@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Thysme</title>
+    <link id="theme" rel="stylesheet" href="/css/acceuil.css"/>
+    <link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="/image/favicon.png" type="image/x-icon"/>
+</head>
+
+<body>
+  <div id="optionbar">
+    <button id="Settings" class="option"><img href="/image/langue.ico">Parametres</button>
+    <button id="langue" class="option">Langue</button>
+  </div>
+  
+    <div id="content"></div>
+
+    <script>
+      fetch('/config/discussion.txt')
+        .then(response => response.text())
+        .then(data => {
+          const lines = data.split('\n');
+          const contentDiv = document.getElementById('content');
+          lines.forEach(line => {
+            const p = document.createElement('p');
+            p.textContent = line;
+            contentDiv.appendChild(p);
+          });
+        });
+    </script>
+    
+    <div class="mainbar">
+        <input id="textinput">
+        <button id="envoi" type="button"><img src="/image/envoi.ico"></button>
+    </div>
+    <script type="module" src="/js/acceuil.js"></script>
+</body>

@@ -1,0 +1,4 @@
+clear__log = True
+join_thread = True
+clear_terminal = True
+prevention = True

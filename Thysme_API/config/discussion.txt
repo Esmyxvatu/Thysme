@@ -1,0 +1,7 @@
+[17:37][Esmyx] > Systeme réussi, commence a taffer sur l'ajout d'utilisateur :)
+[18:31][Esmyx] > Ajout d'utilisateur reussi, commence a taffer sur les differentes langues :|
+[17:36][Esmyx] > Finalement je taff sur l'app :) c'est plus fun :)
+[17:53][Esmyx] > normalement, sa envoie les msg  
+[17:53][Esmyx] > et la  c'est bon ? 
+[17:53][Esmyx] > oui sa marche ! 
+[17:59][Esmyx] > test pour les logs, avec util .... 

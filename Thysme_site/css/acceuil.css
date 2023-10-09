@@ -1,0 +1,44 @@
+button {
+    border: none;
+    background-color: transparent;
+}
+
+#textinput {
+    width: 94%;
+    position: absolute;
+    top: 94%;
+}  
+
+#envoi {
+    position: absolute;
+    left: 95%;
+    top: 93%;
+}
+
+body {
+    background-color: black;
+}
+
+#content {
+    color : whitesmoke;
+}
+
+p {
+    margin: 0;
+}
+
+#Settings {
+    position: relative;
+    left: 92%;
+}
+
+#langue {
+    position: relative;
+    left: 80%;
+}
+
+.option {
+    color: violet;
+    font-size: medium;
+    font-family: serif;
+}

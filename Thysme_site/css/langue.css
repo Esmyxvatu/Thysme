@@ -1,0 +1,23 @@
+.main {
+    padding: 10px;
+    height: 671px;
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40px; /* Ajuste cette valeur pour déplacer le bouton vers le haut */
+    left: 100%; /* Ajuste cette valeur pour positionner le bouton horizontalement */
+    transform: translateX(-50%); /* Centre le bouton horizontalement */
+}
+
+p {
+    color: lightgray;
+    text-align: center;
+}
+
+#return {
+    position: relative;
+    top: -15%; 
+    left: -50%;
+    transform: translateX(-50%);
+}
