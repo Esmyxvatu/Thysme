@@ -4,7 +4,7 @@ from colorama import Fore, Style
 
 color = None
 uc = "Thysme_app/config/util_config.txt"
-log_file = "Thysme_app/config/log.txt"
+log_file = "Thysme_app/config/util_config.txt"
 
 def getvalue(var,file) :
     with open(file, "r") as fichier:

@@ -1,0 +1,94 @@
+.main {
+    padding: 10px;
+    height: 671px;
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40px; /* Ajuste cette valeur pour déplacer le bouton vers le haut */
+    left: 100%; /* Ajuste cette valeur pour positionner le bouton horizontalement */
+    transform: translateX(-50%); /* Centre le bouton horizontalement */
+}
+
+p {
+    color: lightgray;
+    text-align: center;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    transform: translateX(-50%);
+    font-family: Geneva, sans-serif;
+}
+
+#username_ecri {
+    position: absolute;
+    top: 170px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#username {
+    position: absolute;
+    top: 220px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#pswd_ecri {
+    position: absolute;
+    top: 270px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#password {
+    position: absolute;
+    top: 310px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#login {
+    position: absolute;
+    top: 400px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#create_account {
+    position: absolute;
+    top: 660px; 
+    right: -50%;
+    transform: translateX(-50%);
+}
+
+#message {
+    display: none;
+    background-color: yellow;
+    padding: 10px;
+    font-size: 18px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 300px; 
+    left: 100%;
+}
+
+#title {
+    position: relative;
+    top: -10%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#langue {
+    position: absolute;
+    top: 660px; 
+    left: -40%;
+    transform: translateX(-50%);
+}

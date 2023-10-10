@@ -30,22 +30,7 @@ class Acceuil() :
         self.input_texte.bind("<Return>", self.recup_text)
         self.input_texte.pack(side=tk.BOTTOM, fill=tk.X)
         self.text.pack(anchor="w")
-        util.log(0,"Started acceuil")
+        util.log(0,"Setup ...")
+        util.log(0,"Started")
         self.see_discut("a")
         self.acceuil.mainloop()
-
-class Login() :
-    def __init__(self):
-        if not tk._default_root :
-            self.login = tk.Tk()
-        else :
-            self.login = tk._default_root
-        self.text_co = tk.Label(self.login, text="Connection", font=("Arial", 24), fg="white", bg="black", justify="center") #noqa
-    
-    def start(self) :
-        self.login.configure(bg="black")
-        self.login.title("Thysme | Login")
-        self.login.geometry("800x500")
-        self.text_co.pack()
-        util.log(0,"Started login")
-        self.login.mainloop()
