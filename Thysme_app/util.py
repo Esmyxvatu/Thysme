@@ -3,8 +3,8 @@ import time, threading  # noqa: E401
 from colorama import Fore, Style
 
 color = None
-uc = "Thysme_app/config/util_config.txt"
-log_file = "Thysme_app/config/log.txt"
+uc = "./config/util_config.txt"
+log_file = "./config/log.txt"
 
 def getvalue(var,file) :
     with open(file, "r") as fichier:
@@ -56,7 +56,7 @@ def notif(title,msg,icon=None) :
     log(2,"On work for linux")
 
 def save(text,file) :
-    # Créer un fichier et écrire du contenu
+    # Cr�er un fichier et �crire du contenu
     with open(file, "a") as fiile:
         fiile.write(text)
 
@@ -142,7 +142,7 @@ if say_in_terminal == "True" :
     if clear_terminal == "True" :  # noqa: E712
         for i in range(100) :
             print("")
-    #prévention xd
+    #pr�vention xd
     if prevention == "True" :  # noqa: E712
         log(0,f"Log du {calendar()} a {clock()}")
         log(0,"Import d'UTIL reussi")
