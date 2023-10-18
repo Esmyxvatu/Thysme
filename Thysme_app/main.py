@@ -7,10 +7,13 @@ UserID = util.getvalue("UserID", "config\conf.txt")
 username = requests.get("http://127.0.0.1:8080/api/getuser").text
 
 un = username.split("\n")
-usn = un[int(UserID)].split(" : ")[0]
+
+if UserID != "None" :
+    usn = un[int(UserID)].split(" : ")[0]
 
 acceuil = fenetre.Acceuil()
 login = fenetre.Login()
+create_account = fenetre.Create_account()
 
 if connected == "True" :
     acceuil.start(username=usn)
