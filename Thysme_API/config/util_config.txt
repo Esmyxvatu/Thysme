@@ -2,3 +2,4 @@ clear__log = True
 join_thread = True
 clear_terminal = True
 prevention = True
+say_in_terminal = True

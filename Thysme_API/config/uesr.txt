@@ -1,1 +1,2 @@
 Esmyx : 0 = pswd
+Tenshi : 1 = hello

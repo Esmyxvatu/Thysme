@@ -9,7 +9,7 @@ CORS(app)
 def modif() :
     g = str(request.args.get('g'))
     k = str(request.args.get('k'))
-    nom_fichier = 'Thysme_API/config/discussion.txt'
+    nom_fichier = './config/discussion.txt'
     text = f"[{util.clock()}][{k}] > {g} \n"
 
     util.save(text,nom_fichier)
@@ -22,19 +22,24 @@ def adduser() :
     username = str(request.args.get('u'))
     password = str(request.args.get('p'))
     
-    userid = util.getligne("Thysme_API/config/uesr.txt")
+    userid = util.getligne("./config/uesr.txt")
 
     line = f"\n{username} : {userid} = {password}"
-    file = "Thysme_API/config/uesr.txt"
+    file = "./config/uesr.txt"
 
     util.save(line,file)
 
     return str(userid)
 
+@app.route('/api/getuser')
+def getuser() :
+    user = util.read("./config/uesr.txt")
+    return user
+
 @app.route('/api/read')
 def getdisuct() :
-    discut = util.read("Thysme_API/config/discussion.txt")
+    discut = util.read("./config/discussion.txt")
     return discut
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port="8080")

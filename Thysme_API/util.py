@@ -3,7 +3,7 @@ import time, threading  # noqa: E401
 from colorama import Fore, Style
 
 color = None
-uc = "Thysme_API/config/util_config.txt"
+uc = "config/util_config.txt"
 
 def getvalue(var,file) :
     with open(file, "r") as fichier:
@@ -23,6 +23,7 @@ clear__log = getvalue("clear__log",uc)
 join_thread = getvalue("join_thread",uc)
 clear_terminal = getvalue("clear_terminal",uc)
 prevention = getvalue("prevention",uc)
+say_in_terminal = getvalue("say_in_terminal",uc)
 
 def wait(tiime,function_to_execute_after) :
     thread = threading.Timer(tiime,function_to_execute_after)
@@ -127,19 +128,21 @@ def log(state,info) :
 
     hour = clock("local")
 
-    print(color + f"[{hour}]{value}> {info}" + Style.RESET_ALL)
+    if say_in_terminal == "True" :  # noqa: E712
+        print(color + f"[{hour}]{value}> {info}" + Style.RESET_ALL)
     save(f"[{hour}]{value}> {info}","./log.txt")
     save("\n","./log.txt")
 
 save("\n","./log.txt")
 
-#clear le terminal
-if clear_terminal == "True" :  # noqa: E712
-    for i in range(100) :
-        print("")
+if say_in_terminal == "True" :  # noqa: E712
+    #clear le terminal
+    if clear_terminal == "True" :  # noqa: E712
+        for i in range(100) :
+            print("")
 
-if clear__log == "True" :  # noqa: E712
-    clear_file("./log.txt")
+    if clear__log == "True" :  # noqa: E712
+        clear_file("./log.txt")
 
 #prévention xd
 if prevention == "True" :  # noqa: E712
